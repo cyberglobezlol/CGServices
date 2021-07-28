@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="73992667-f48e-4899-a677-dc055c97c8b7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://84.110.37.131:8080/CGLeakServices/CGLeakService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CGLeakService4.xsd" MetadataType="Schema" ID="343cabb7-5740-4237-b27e-42d8cc93fbb3" SourceId="1" SourceUrl="http://84.110.37.131:8080/CGLeakServices/CGLeakService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CGLeakService1.disco" MetadataType="Disco" ID="34858ca9-38f0-40ff-933a-189af97884ff" SourceId="1" SourceUrl="http://84.110.37.131:8080/CGLeakServices/CGLeakService.svc?disco" />
+    <MetadataFile FileName="CGLeakService41.xsd" MetadataType="Schema" ID="49292ef2-d6e0-4b7a-99f1-7d8d7a1a9ce2" SourceId="1" SourceUrl="http://84.110.37.131:8080/CGLeakServices/CGLeakService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CGLeakService42.xsd" MetadataType="Schema" ID="b3a46b7c-842e-407f-b56a-17e461f10fbc" SourceId="1" SourceUrl="http://84.110.37.131:8080/CGLeakServices/CGLeakService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CGLeakService1.wsdl" MetadataType="Wsdl" ID="1b736adb-289f-4426-ab5b-54e7def509ff" SourceId="1" SourceUrl="http://84.110.37.131:8080/CGLeakServices/CGLeakService.svc?wsdl" />
+    <MetadataFile FileName="CGLeakService43.xsd" MetadataType="Schema" ID="6b3d3027-9ac8-4cf0-adf4-21c2b9674ec4" SourceId="1" SourceUrl="http://84.110.37.131:8080/CGLeakServices/CGLeakService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

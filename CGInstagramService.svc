@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="CGServices.CGInstagramService" CodeBehind="CGInstagramService.svc.cs" %>

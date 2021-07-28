@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DataLeakDataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DataLeakDataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DataLeakDataSet.xsd" id="DataLeakDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DataLeakDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SocialUsers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="Id" type="xs:int" />
+              <xs:element minOccurs="0" name="Username">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Password">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Accesstoken">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Cookie">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LastUseTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SocialType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Uid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AccesstokenSecret">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Company">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Blob" type="xs:base64Binary" />
+              <xs:element minOccurs="0" name="Status" type="xs:int" />
+              <xs:element minOccurs="0" name="IsClientAvatar" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FirstNames">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="FirsName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LastNames">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LastName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MexicoPhones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" type="xs:int" />
+              <xs:element minOccurs="0" name="TELEFONO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MARCA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MODELO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NOMBRE1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NOMBRE2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NOMBRE_x0020_COMPLETO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RFC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DOMICILIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NUMERO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="INTERIOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="COLONIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CIUDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EDO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TEL_CONTACTO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IMEI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ICCID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TP_PAGO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CONTACTO1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CONTACTO2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="plan_orig">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="renaut">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="B_Day">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CountAll" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PersonIDTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+              <xs:element minOccurs="0" name="FirstName" type="xs:string" />
+              <xs:element minOccurs="0" name="LastName" type="xs:string" />
+              <xs:element minOccurs="0" name="FullName" type="xs:string" />
+              <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Sex" type="xs:string" />
+              <xs:element minOccurs="0" name="FatherName" type="xs:string" />
+              <xs:element minOccurs="0" name="MotherName" type="xs:string" />
+              <xs:element minOccurs="0" name="UserName" type="xs:string" />
+              <xs:element minOccurs="0" name="Password" type="xs:string" />
+              <xs:element minOccurs="0" name="PasswordHint" type="xs:string" />
+              <xs:element minOccurs="0" name="Hash" type="xs:string" />
+              <xs:element minOccurs="0" name="EmailAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="Address" type="xs:string" />
+              <xs:element minOccurs="0" name="CountryAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="International_dialing" type="xs:string" />
+              <xs:element minOccurs="0" name="PhoneNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="CountryPhone" type="xs:string" />
+              <xs:element minOccurs="0" name="IMEI" type="xs:string" />
+              <xs:element minOccurs="0" name="ICCID" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentType" type="xs:string" />
+              <xs:element minOccurs="0" name="CreditCardNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="OtherInfo" type="xs:string" />
+              <xs:element minOccurs="0" name="Source" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AddressTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="AddressID" type="xs:int" />
+              <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+              <xs:element minOccurs="0" name="Address" type="xs:string" />
+              <xs:element minOccurs="0" name="Country" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EmailTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="EmailID" type="xs:int" />
+              <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+              <xs:element minOccurs="0" name="EmailAddress" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PasswordTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Hash" type="xs:string" />
+              <xs:element minOccurs="0" name="Source" type="xs:int" />
+              <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+              <xs:element minOccurs="0" name="PasswordHint" type="xs:string" />
+              <xs:element minOccurs="0" name="Password" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PhoneTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="PhoneID" type="xs:int" />
+              <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+              <xs:element minOccurs="0" name="PhoneNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="CountryCode" type="xs:string" />
+              <xs:element minOccurs="0" name="IMEI" type="xs:string" />
+              <xs:element minOccurs="0" name="ICCID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SourceTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="Source_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="Site" type="xs:string" />
+              <xs:element minOccurs="0" name="Password_Encryption" type="xs:string" />
+              <xs:element minOccurs="0" name="Leak_File" type="xs:string" />
+              <xs:element minOccurs="0" name="Leak_Date" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UserNameTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Source" type="xs:int" />
+              <xs:element name="PersonID" type="xs:int" />
+              <xs:element minOccurs="0" name="UserName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CountryCodesTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Country" type="xs:string" />
+              <xs:element minOccurs="0" name="Country_code" type="xs:string" />
+              <xs:element minOccurs="0" name="International_dialing" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ExtendedTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+              <xs:element minOccurs="0" name="OtherInfo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FinanceTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+              <xs:element minOccurs="0" name="PaymentType" type="xs:string" />
+              <xs:element minOccurs="0" name="CreditCardNumber" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PersonalInfoTB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+              <xs:element minOccurs="0" name="FirstName" type="xs:string" />
+              <xs:element minOccurs="0" name="MiddleName" type="xs:string" />
+              <xs:element minOccurs="0" name="LastName" type="xs:string" />
+              <xs:element minOccurs="0" name="FullName" type="xs:string" />
+              <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Sex" type="xs:string" />
+              <xs:element minOccurs="0" name="FatherName" type="xs:string" />
+              <xs:element minOccurs="0" name="MotherName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_PersonIDTB_EmailTB" msdata:parent="PersonIDTB" msdata:child="EmailTB" msdata:parentkey="PersonID" msdata:childkey="PersonID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK_PersonIDTB_PasswordTB" msdata:parent="PersonIDTB" msdata:child="PasswordTB" msdata:parentkey="PersonID" msdata:childkey="PersonID" />
+      <msdata:Relationship name="FK_SourceTB_PasswordTB" msdata:parent="SourceTB" msdata:child="PasswordTB" msdata:parentkey="Source_ID" msdata:childkey="Source" />
+      <msdata:Relationship name="FK_SourceTB_UserNameTB" msdata:parent="SourceTB" msdata:child="UserNameTB" msdata:parentkey="Source_ID" msdata:childkey="PersonID" />
+      <msdata:Relationship name="FK_PersonIDTB_PhoneTB" msdata:parent="PersonIDTB" msdata:child="PhoneTB" msdata:parentkey="PersonID" msdata:childkey="PersonID" />
+      <msdata:Relationship name="FK_PersonIDTB_UserNameTB" msdata:parent="PersonIDTB" msdata:child="UserNameTB" msdata:parentkey="PersonID" msdata:childkey="PersonID" />
+      <msdata:Relationship name="FinanceTB_PersonIDTB" msdata:parent="PersonIDTB" msdata:child="FinanceTB" msdata:parentkey="PersonID" msdata:childkey="PersonID" />
+      <msdata:Relationship name="PersonalInfoTB_PersonIDTB" msdata:parent="PersonIDTB" msdata:child="PersonalInfoTB" msdata:parentkey="PersonID" msdata:childkey="PersonID" />
+      <msdata:Relationship name="ExtendedTB_PersonIDTB" msdata:parent="PersonIDTB" msdata:child="ExtendedTB" msdata:parentkey="PersonID" msdata:childkey="PersonID" />
+      <msdata:Relationship name="AddressTB_CountryCodesTB" msdata:parent="CountryCodesTB" msdata:child="AddressTB" msdata:parentkey="Country_code" msdata:childkey="Country" />
+      <msdata:Relationship name="CountryCodesTB_PhoneTB" msdata:parent="CountryCodesTB" msdata:child="PhoneTB" msdata:parentkey="Country_code" msdata:childkey="CountryCode" />
+      <msdata:Relationship name="FK_PersonIDTB_AddressTB" msdata:parent="PersonIDTB" msdata:child="AddressTB" msdata:parentkey="PersonID" msdata:childkey="PersonID" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

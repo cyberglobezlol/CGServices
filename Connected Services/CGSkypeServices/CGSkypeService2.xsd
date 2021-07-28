@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CyberGlobesDM.SkypeDMs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CyberGlobesDM.SkypeDMs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SkypeFullResultDM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DatabaseRowId" type="xs:int" />
+      <xs:element minOccurs="0" name="RefreshToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SkypePersonDM" nillable="true" type="tns:SkypePersonDM" />
+      <xs:element minOccurs="0" name="SkypeToken" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SkypeFullResultDM" nillable="true" type="tns:SkypeFullResultDM" />
+  <xs:complexType name="SkypePersonDM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="requestId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="results" nillable="true" type="tns:ArrayOfResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SkypePersonDM" nillable="true" type="tns:SkypePersonDM" />
+  <xs:complexType name="ArrayOfResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Result" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResult" nillable="true" type="tns:ArrayOfResult" />
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nodeProfileData" nillable="true" type="tns:Nodeprofiledata" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result" />
+  <xs:complexType name="Nodeprofiledata">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="avatarUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="skypeId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Nodeprofiledata" nillable="true" type="tns:Nodeprofiledata" />
+</xs:schema>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="CGServices.CGGeneralService" CodeBehind="CGGeneralService.svc.cs" %>

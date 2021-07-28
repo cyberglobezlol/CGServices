@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a6b017bd-0754-4753-8c0d-396540b6248a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56665/CGOKService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CGOKService.xsd" MetadataType="Schema" ID="de62c731-27c8-480e-9b83-cd2651856280" SourceId="1" SourceUrl="http://localhost:56665/CGOKService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CGOKService1.xsd" MetadataType="Schema" ID="edfb7958-584a-4c95-8335-b3d0ba216e9d" SourceId="1" SourceUrl="http://localhost:56665/CGOKService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CGOKService.wsdl" MetadataType="Wsdl" ID="c099a3a0-0e8b-4cec-a1c4-725db50e454c" SourceId="1" SourceUrl="http://localhost:56665/CGOKService.svc?wsdl" />
+    <MetadataFile FileName="CGOKService2.xsd" MetadataType="Schema" ID="483a5a42-b11e-4618-8c3c-40363eaed3be" SourceId="1" SourceUrl="http://localhost:56665/CGOKService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CGOKService.disco" MetadataType="Disco" ID="b3658ba7-b4bd-441c-85c6-44aafe23ec81" SourceId="1" SourceUrl="http://localhost:56665/CGOKService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

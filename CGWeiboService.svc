@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="CGServices.CGWeiboService" CodeBehind="CGWeiboService.svc.cs" %>

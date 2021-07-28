@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CGGeneralService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttp_IService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://www.cyberglobes.info/CGServicesEnZ/CGGeneralService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://www.cyberglobes.info/CGServicesEnZ/CGGeneralService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://www.cyberglobes.info/CGServicesEnZ/CGGeneralService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CyberGlobesInfra" />
+      <xsd:import schemaLocation="https://www.cyberglobes.info/CGServicesEnZ/CGGeneralService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CyberGlobesDM.GeneralsDMs" />
+      <xsd:import schemaLocation="https://www.cyberglobes.info/CGServicesEnZ/CGGeneralService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/CGServices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICGGeneralService_IsLoginAuthorize_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoginAuthorize" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_IsLoginAuthorize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoginAuthorizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetSocialUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSocialUser" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetSocialUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSocialUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetSocialUserByUsernameAndPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSocialUserByUsernameAndPassword" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetSocialUserByUsernameAndPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSocialUserByUsernameAndPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetCyberglobesUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCyberglobesUser" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetCyberglobesUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCyberglobesUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_WriteToLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteToLog" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_WriteToLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteToLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_UpdateCookie_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCookie" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_UpdateCookie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCookieResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_ReportBlockedAvatar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportBlockedAvatar" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_ReportBlockedAvatar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReportBlockedAvatarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_UpdateSkypeToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSkypeToken" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_UpdateSkypeToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSkypeTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_InitializeAnalyticsServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitializeAnalyticsServices" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_InitializeAnalyticsServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitializeAnalyticsServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetWorkstationRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkstationRegistration" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetWorkstationRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkstationRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_IsValidStationInstallation_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsValidStationInstallation" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_IsValidStationInstallation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsValidStationInstallationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_RegisterWorkstation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterWorkstation" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_RegisterWorkstation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterWorkstationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_AddSocialUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSocialUser" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_AddSocialUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSocialUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetRandomUserAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomUserAgent" />
+  </wsdl:message>
+  <wsdl:message name="ICGGeneralService_GetRandomUserAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomUserAgentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICGGeneralService">
+    <wsdl:operation name="IsLoginAuthorize">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/IsLoginAuthorize" message="tns:ICGGeneralService_IsLoginAuthorize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/IsLoginAuthorizeResponse" message="tns:ICGGeneralService_IsLoginAuthorize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSocialUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/GetSocialUser" message="tns:ICGGeneralService_GetSocialUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/GetSocialUserResponse" message="tns:ICGGeneralService_GetSocialUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSocialUserByUsernameAndPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/GetSocialUserByUsernameAndPassword" message="tns:ICGGeneralService_GetSocialUserByUsernameAndPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/GetSocialUserByUsernameAndPasswordResponse" message="tns:ICGGeneralService_GetSocialUserByUsernameAndPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCyberglobesUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/GetCyberglobesUser" message="tns:ICGGeneralService_GetCyberglobesUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/GetCyberglobesUserResponse" message="tns:ICGGeneralService_GetCyberglobesUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteToLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/WriteToLog" message="tns:ICGGeneralService_WriteToLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/WriteToLogResponse" message="tns:ICGGeneralService_WriteToLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/GetDataUsingDataContract" message="tns:ICGGeneralService_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/GetDataUsingDataContractResponse" message="tns:ICGGeneralService_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCookie">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/UpdateCookie" message="tns:ICGGeneralService_UpdateCookie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/UpdateCookieResponse" message="tns:ICGGeneralService_UpdateCookie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportBlockedAvatar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/ReportBlockedAvatar" message="tns:ICGGeneralService_ReportBlockedAvatar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/ReportBlockedAvatarResponse" message="tns:ICGGeneralService_ReportBlockedAvatar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSkypeToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/UpdateSkypeToken" message="tns:ICGGeneralService_UpdateSkypeToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/UpdateSkypeTokenResponse" message="tns:ICGGeneralService_UpdateSkypeToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InitializeAnalyticsServices">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/InitializeAnalyticsServices" message="tns:ICGGeneralService_InitializeAnalyticsServices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/InitializeAnalyticsServicesResponse" message="tns:ICGGeneralService_InitializeAnalyticsServices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkstationRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/GetWorkstationRegistration" message="tns:ICGGeneralService_GetWorkstationRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/GetWorkstationRegistrationResponse" message="tns:ICGGeneralService_GetWorkstationRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidStationInstallation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/IsValidStationInstallation" message="tns:ICGGeneralService_IsValidStationInstallation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/IsValidStationInstallationResponse" message="tns:ICGGeneralService_IsValidStationInstallation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterWorkstation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/RegisterWorkstation" message="tns:ICGGeneralService_RegisterWorkstation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/RegisterWorkstationResponse" message="tns:ICGGeneralService_RegisterWorkstation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSocialUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/AddSocialUser" message="tns:ICGGeneralService_AddSocialUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/AddSocialUserResponse" message="tns:ICGGeneralService_AddSocialUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRandomUserAgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGGeneralService/GetRandomUserAgent" message="tns:ICGGeneralService_GetRandomUserAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGGeneralService/GetRandomUserAgentResponse" message="tns:ICGGeneralService_GetRandomUserAgent_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttp_IService" type="tns:ICGGeneralService">
+    <wsp:PolicyReference URI="#BasicHttp_IService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsLoginAuthorize">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/IsLoginAuthorize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSocialUser">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/GetSocialUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSocialUserByUsernameAndPassword">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/GetSocialUserByUsernameAndPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCyberglobesUser">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/GetCyberglobesUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteToLog">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/WriteToLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCookie">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/UpdateCookie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportBlockedAvatar">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/ReportBlockedAvatar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSkypeToken">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/UpdateSkypeToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitializeAnalyticsServices">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/InitializeAnalyticsServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkstationRegistration">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/GetWorkstationRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidStationInstallation">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/IsValidStationInstallation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterWorkstation">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/RegisterWorkstation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSocialUser">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/AddSocialUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRandomUserAgent">
+      <soap:operation soapAction="http://tempuri.org/ICGGeneralService/GetRandomUserAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CGGeneralService">
+    <wsdl:port name="BasicHttp_IService" binding="tns:BasicHttp_IService">
+      <soap:address location="https://www.cyberglobes.info/CGServicesEnZ/CGGeneralService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

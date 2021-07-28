@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="69ebe8f2-0c64-40c5-b97b-eea736b906db" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56665/CGTelegramService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CGTelegramService.xsd" MetadataType="Schema" ID="0c7c59f8-7b8b-4140-9b7d-42eeb1bc9011" SourceId="1" SourceUrl="http://localhost:56665/CGTelegramService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CGTelegramService1.xsd" MetadataType="Schema" ID="d892e51c-c028-4e35-9080-353024e98b1a" SourceId="1" SourceUrl="http://localhost:56665/CGTelegramService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CGTelegramService.wsdl" MetadataType="Wsdl" ID="4a17f252-3046-4c8d-bb96-49447621afa8" SourceId="1" SourceUrl="http://localhost:56665/CGTelegramService.svc?wsdl" />
+    <MetadataFile FileName="CGTelegramService.disco" MetadataType="Disco" ID="9bfddb42-d025-460d-ab56-dd58735b514c" SourceId="1" SourceUrl="http://localhost:56665/CGTelegramService.svc?disco" />
+    <MetadataFile FileName="CGTelegramService2.xsd" MetadataType="Schema" ID="8203e854-c487-4a49-b718-27576261b9bc" SourceId="1" SourceUrl="http://localhost:56665/CGTelegramService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CGTelegramService3.xsd" MetadataType="Schema" ID="988b63a7-06ba-4c25-8896-caf8333a0dff" SourceId="1" SourceUrl="http://localhost:56665/CGTelegramService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

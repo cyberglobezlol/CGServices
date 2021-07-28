@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d78874b3-3291-4027-afbd-3110943c581c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://www.socialice.info/CGServicesEnY/CGGeneralService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CGGeneralService.xsd" MetadataType="Schema" ID="8bc3c9c1-dc5d-4c06-9463-e99ae15b7adc" SourceId="1" SourceUrl="https://www.socialice.info/CGServicesEnY/CGGeneralService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CGGeneralService1.xsd" MetadataType="Schema" ID="c86c2937-df98-4185-b50e-2e798cc63161" SourceId="1" SourceUrl="https://www.socialice.info/CGServicesEnY/CGGeneralService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CGGeneralService.disco" MetadataType="Disco" ID="65b42590-f215-4d4a-b199-eb44ee7ca961" SourceId="1" SourceUrl="https://www.socialice.info/CGServicesEnY/CGGeneralService.svc?disco" />
+    <MetadataFile FileName="CGGeneralService2.xsd" MetadataType="Schema" ID="c1480583-17c0-48c7-875f-381884c45ff5" SourceId="1" SourceUrl="https://www.socialice.info/CGServicesEnY/CGGeneralService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CGGeneralService3.xsd" MetadataType="Schema" ID="f387e940-fe81-4f5c-9026-2b0a7f68d6ec" SourceId="1" SourceUrl="https://www.socialice.info/CGServicesEnY/CGGeneralService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CGGeneralService.wsdl" MetadataType="Wsdl" ID="bcedb15b-2d1d-4da7-8093-aac34467fefd" SourceId="1" SourceUrl="https://www.socialice.info/CGServicesEnY/CGGeneralService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

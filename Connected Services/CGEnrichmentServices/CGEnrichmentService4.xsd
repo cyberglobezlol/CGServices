@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="YugaUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address_street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="addressbook_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="biography" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="business_contact_method" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="city_id" type="xs:long" />
+      <xs:element minOccurs="0" name="city_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contact_phone_number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="direct_messaging" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="external_lynx_url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="external_url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fb_page_call_to_action_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="follower_count" type="xs:int" />
+      <xs:element minOccurs="0" name="following_count" type="xs:int" />
+      <xs:element minOccurs="0" name="full_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="geo_media_count" type="xs:int" />
+      <xs:element minOccurs="0" name="has_anonymous_profile_picture" type="xs:boolean" />
+      <xs:element minOccurs="0" name="has_biography_translation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="has_chaining" type="xs:boolean" />
+      <xs:element minOccurs="0" name="hd_profile_pic_url_info" nillable="true" type="tns:Hd_Profile_Pic_Url_Info" />
+      <xs:element minOccurs="0" name="hd_profile_pic_versions" nillable="true" type="tns:ArrayOfHd_Profile_Pic_Versions" />
+      <xs:element minOccurs="0" name="is_business" type="xs:boolean" />
+      <xs:element minOccurs="0" name="is_call_to_action_enabled" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="is_favorite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="is_private" type="xs:boolean" />
+      <xs:element minOccurs="0" name="is_verified" type="xs:boolean" />
+      <xs:element minOccurs="0" name="latitude" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="longitude" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="media_count" type="xs:int" />
+      <xs:element minOccurs="0" name="pk" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="profile_pic_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="profile_pic_url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="public_email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="public_phone_country_code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="public_phone_number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="reel_auto_archive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="school" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usertags_count" type="xs:int" />
+      <xs:element minOccurs="0" name="zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="YugaUser" nillable="true" type="tns:YugaUser" />
+  <xs:complexType name="Hd_Profile_Pic_Url_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="height" type="xs:int" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="width" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Hd_Profile_Pic_Url_Info" nillable="true" type="tns:Hd_Profile_Pic_Url_Info" />
+  <xs:complexType name="ArrayOfHd_Profile_Pic_Versions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hd_Profile_Pic_Versions" nillable="true" type="tns:Hd_Profile_Pic_Versions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHd_Profile_Pic_Versions" nillable="true" type="tns:ArrayOfHd_Profile_Pic_Versions" />
+  <xs:complexType name="Hd_Profile_Pic_Versions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="height" type="xs:int" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="width" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Hd_Profile_Pic_Versions" nillable="true" type="tns:Hd_Profile_Pic_Versions" />
+</xs:schema>

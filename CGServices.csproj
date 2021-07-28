@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F3AD577-A310-44B9-82A2-512BD4D80EB2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CGServices</RootNamespace>
+    <AssemblyName>CGServices</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Use64BitIISExpress />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Apis.YouTube.v3">
+      <HintPath>..\packages\Google.Apis.YouTube.v3.1.41.1.1699\lib\net45\Google.Apis.YouTube.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.10.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.10.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.10.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.10.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.10.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.10.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.5\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TweetSharp, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TweetSharp\bin\Debug\TweetSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CGAnalyticsService.svc" />
+    <Content Include="CGAvatarManagerService.svc" />
+    <Content Include="CGDBReportsService.svc" />
+    <Content Include="CGVKService.svc" />
+    <Content Include="CGProfilerService.svc" />
+    <Content Include="CGWeiboService.svc" />
+    <Content Include="CGYoutubeService.svc" />
+    <Content Include="CGInstagramService.svc" />
+    <Content Include="CGGeneralService.svc" />
+    <Content Include="CGTwitterService.svc" />
+    <Content Include="CGFacebookService.svc" />
+    <None Include="Connected Services\CGEnrichmentServices\CGEnrichmentService.wsdl" />
+    <None Include="Connected Services\CGEnrichmentServices\CGEnrichmentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGEnrichmentServices\CGEnrichmentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGEnrichmentServices\CGEnrichmentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGEnrichmentServices\CGEnrichmentService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGEnrichmentServices\CGEnrichmentService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGEnrichmentServices\CGEnrichmentService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\CGEnrichmentServices\CGServices.CGEnrichmentServices.DataLeakDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CGEnrichmentServices\CGServices.CGEnrichmentServices.InstagramAddressBookDM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CGEnrichmentServices\CGServices.CGEnrichmentServices.InstagramAddressBookResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CGEnrichmentServices\CGServices.CGEnrichmentServices.MexicoCountRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CGEnrichmentServices\CGServices.CGEnrichmentServices.MexicoPhonesSearchByTelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CGEnrichmentServices\CGServices.CGEnrichmentServices.UsersLeakSearchByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CGEnrichmentServices\DataLeakDataSet.xsd" />
+    <None Include="Connected Services\CGGeneralServicesDB\CGGeneralService.disco" />
+    <None Include="Connected Services\CGEnrichmentServices\CGEnrichmentService.disco" />
+    <None Include="Connected Services\CGEnrichmentServices\configuration91.svcinfo" />
+    <None Include="Connected Services\CGEnrichmentServices\configuration.svcinfo" />
+    <None Include="Connected Services\CGEnrichmentServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\CGGeneralServicesDB\CGServices.CGGeneralServicesDB.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CGGeneralServicesDB\configuration91.svcinfo" />
+    <None Include="Connected Services\CGGeneralServicesDB\configuration.svcinfo" />
+    <None Include="Connected Services\CGGeneralServicesDB\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CGLeakServices\CGLeakService1.disco" />
+    <Content Include="Connected Services\CGLeakServices\CGServices.CGLeakServices.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CGLeakServices\CGLeakService1.wsdl" />
+    <None Include="Connected Services\CGLeakServices\CGLeakService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGLeakServices\CGLeakService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGLeakServices\CGLeakService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGLeakServices\CGLeakService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGLeakServices\configuration91.svcinfo" />
+    <None Include="Connected Services\CGLeakServices\configuration.svcinfo" />
+    <None Include="Connected Services\CGLeakServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CGOKServices\CGOKService.wsdl" />
+    <None Include="Connected Services\CGOKServices\CGOKService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGOKServices\CGOKService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGOKServices\CGOKService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGSkypeServices\CGSkypeService.wsdl" />
+    <None Include="Connected Services\CGSkypeServices\CGSkypeService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGSkypeServices\CGSkypeService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGSkypeServices\CGSkypeService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGTelegramServices\CGTelegramService.disco" />
+    <None Include="Connected Services\CGTelegramServices\configuration91.svcinfo" />
+    <None Include="Connected Services\CGTelegramServices\configuration.svcinfo" />
+    <None Include="Connected Services\CGTelegramServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CGSkypeServices\CGSkypeService.disco" />
+    <None Include="Connected Services\CGSkypeServices\configuration91.svcinfo" />
+    <None Include="Connected Services\CGSkypeServices\configuration.svcinfo" />
+    <None Include="Connected Services\CGSkypeServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CGOKServices\CGOKService.disco" />
+    <None Include="Connected Services\CGOKServices\configuration91.svcinfo" />
+    <None Include="Connected Services\CGOKServices\configuration.svcinfo" />
+    <None Include="Connected Services\CGOKServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.deploy.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CGAnalyticsService.svc.cs">
+      <DependentUpon>CGAnalyticsService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGAvatarManagerService.svc.cs">
+      <DependentUpon>CGAvatarManagerService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGDBReportsService.svc.cs">
+      <DependentUpon>CGDBReportsService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGParentController.cs" />
+    <Compile Include="CGVKService.svc.cs">
+      <DependentUpon>CGVKService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGProfilerService.svc.cs">
+      <DependentUpon>CGProfilerService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGWeiboService.svc.cs">
+      <DependentUpon>CGWeiboService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGYoutubeService.svc.cs">
+      <DependentUpon>CGYoutubeService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGInstagramService.svc.cs">
+      <DependentUpon>CGInstagramService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGGeneralService.svc.cs">
+      <DependentUpon>CGGeneralService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGTwitterService.svc.cs">
+      <DependentUpon>CGTwitterService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGFacebookService.svc.cs">
+      <DependentUpon>CGFacebookService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CGEnrichmentServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CGGeneralServicesDB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CGLeakServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CGOKServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CGSkypeServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CGTelegramServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ICGAnalyticsService.cs" />
+    <Compile Include="ICGAvatarManagerService.cs" />
+    <Compile Include="ICGDBReportsService.cs" />
+    <Compile Include="ICGVKService.cs" />
+    <Compile Include="ICGProfilerService.cs" />
+    <Compile Include="ICGWeiboService.cs" />
+    <Compile Include="ICGYoutubeService.cs" />
+    <Compile Include="ICGInstagramService.cs" />
+    <Compile Include="ICGGeneralService.cs" />
+    <Compile Include="ICGTwitterService.cs" />
+    <Compile Include="ICGFacebookService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WriteToLogHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Properties\DataSources\CyberGlobesDM.GeneralsDMs.SocialUser.datasource" />
+    <None Include="Connected Services\CGGeneralServicesDB\CGGeneralService.wsdl" />
+    <None Include="Connected Services\CGGeneralServicesDB\CGGeneralService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGGeneralServicesDB\CGGeneralService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGGeneralServicesDB\CGGeneralService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGGeneralServicesDB\CGGeneralService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Properties\DataSources\CyberGlobesDM.WeLeakInfoDMs.WeLeakInfoPersonDM.datasource" />
+    <None Include="Connected Services\CGTelegramServices\CGTelegramService.wsdl" />
+    <None Include="Connected Services\CGTelegramServices\CGTelegramService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGTelegramServices\CGTelegramService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGTelegramServices\CGTelegramService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CGTelegramServices\CGTelegramService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Properties\DataSources\CyberGlobesDM.TelegramDMs.TelegramPersonDM.datasource" />
+    <Content Include="Properties\DataSources\CyberGlobesDM.SkypeDMs.SkypeFullResultDM.datasource" />
+    <Content Include="Properties\DataSources\CyberGlobesDM.InstagramDMs.InstagramAddressBookDM.datasource" />
+    <Content Include="Properties\DataSources\CyberGlobesDM.OKDMs.OKUserDM.datasource" />
+    <None Include="Properties\PublishProfiles\CGServices.pubxml" />
+    <Content Include="session.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="TeleSessions.rar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CyberGlobes.BL\CyberGlobes.BL.csproj">
+      <Project>{d1bede06-9efb-471b-b024-1b354d1ef8d8}</Project>
+      <Name>CyberGlobes.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CyberGlobes.DAL\CyberGlobes.DAL.csproj">
+      <Project>{62c2f1ae-68da-4b2f-a6a2-a9996f5e7727}</Project>
+      <Name>CyberGlobes.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CyberGlobesDM\CyberGlobesDM.csproj">
+      <Project>{01b9e9b9-f071-4291-8f8b-c7414490acf1}</Project>
+      <Name>CyberGlobesDM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CyberGlobesInfra\CyberGlobesInfra.csproj">
+      <Project>{16794e1a-9313-482f-a478-136b50773edf}</Project>
+      <Name>CyberGlobesInfra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Piplapis\Piplapis.csproj">
+      <Project>{e9921187-c395-422d-844a-6136c55cd6bc}</Project>
+      <Name>Piplapis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CGEnrichmentServices\" />
+    <WCFMetadataStorage Include="Connected Services\CGGeneralServicesDB\" />
+    <WCFMetadataStorage Include="Connected Services\CGLeakServices\" />
+    <WCFMetadataStorage Include="Connected Services\CGOKServices\" />
+    <WCFMetadataStorage Include="Connected Services\CGSkypeServices\" />
+    <WCFMetadataStorage Include="Connected Services\CGTelegramServices\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReactorLocation>"C:\Program Files (x86)\Eziriz\.NET Reactor\dotNET_Reactor.exe"</ReactorLocation>
+    <ReactorProject>"C:\ProjectCode\CyberGlobes\CGServices\CGServicesObfuscation.nrproj"</ReactorProject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'deploy|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56907</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56907/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties Reactor_Deploy="1" Reactor_Enabled="0" Reactor_Commands="" Reactor_Project="C:\Users\pini\Source\Workspaces\CyberGlobes\CGServices\CGServicesObfuscation.nrproj" Reactor_Configuration="Release" Reactor_Output="" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.10.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.10.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.10.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.10.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.10.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.10.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.10.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.10.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.2.10.0\build\Microsoft.ApplicationInsights.WindowsServer.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.WindowsServer.2.10.0\build\Microsoft.ApplicationInsights.WindowsServer.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.Web.2.10.0\build\Microsoft.ApplicationInsights.Web.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.Web.2.10.0\build\Microsoft.ApplicationInsights.Web.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.10.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.10.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.10.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.10.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.WindowsServer.2.10.0\build\Microsoft.ApplicationInsights.WindowsServer.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.2.10.0\build\Microsoft.ApplicationInsights.WindowsServer.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.Web.2.10.0\build\Microsoft.ApplicationInsights.Web.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.Web.2.10.0\build\Microsoft.ApplicationInsights.Web.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

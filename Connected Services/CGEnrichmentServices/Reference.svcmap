@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="01f71af9-6de2-4a6e-a242-c03737a4f4a2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56665/CGEnrichmentService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CGEnrichmentService.xsd" MetadataType="Schema" ID="d2f118e2-d61c-4b71-a2ce-6cc7325a1230" SourceId="1" SourceUrl="http://localhost:56665/CGEnrichmentService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CGEnrichmentService1.xsd" MetadataType="Schema" ID="8102f0f2-e28a-4cad-9cd1-50d48944285d" SourceId="1" SourceUrl="http://localhost:56665/CGEnrichmentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CGEnrichmentService.disco" MetadataType="Disco" ID="e6a5caaa-5bbe-46d7-a7b4-6cbd617d4c47" SourceId="1" SourceUrl="http://localhost:56665/CGEnrichmentService.svc?disco" />
+    <MetadataFile FileName="CGEnrichmentService2.xsd" MetadataType="Schema" ID="24bedad2-6fca-4a45-b761-00848637dff1" SourceId="1" SourceUrl="http://localhost:56665/CGEnrichmentService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CGEnrichmentService.wsdl" MetadataType="Wsdl" ID="75ed43d7-fea2-4574-81d4-2f43f8c8b4d4" SourceId="1" SourceUrl="http://localhost:56665/CGEnrichmentService.svc?wsdl" />
+    <MetadataFile FileName="CGEnrichmentService3.xsd" MetadataType="Schema" ID="678457f2-1b29-451b-bc16-788182bb29b8" SourceId="1" SourceUrl="http://localhost:56665/CGEnrichmentService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CGEnrichmentService4.xsd" MetadataType="Schema" ID="bd8945d7-1a25-478c-90b5-b0a2602368cc" SourceId="1" SourceUrl="http://localhost:56665/CGEnrichmentService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
